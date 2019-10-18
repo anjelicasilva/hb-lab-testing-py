@@ -37,9 +37,24 @@ def most_and_least_common_type(treats):
     Example:
 
         >>> treats = [{'type': 'dessert'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'drink'}]
-        
         >>> most_and_least_common_type(treats)
         ('dessert', 'drink')
+
+        >>> treats = []
+        >>> most_and_least_common_type(treats)
+        (None, None)
+
+        >>> treats = [{'type': 'dessert'}, {'type':'drink'}]
+        >>> most_and_least_common_type(treats)
+        ('dessert', 'dessert')
+
+        >>> treats = [{'type': 'dessert'},{'type': 'dessert'},{'type':'drink'}]
+        >>> most_and_least_common_type(treats)
+        ('dessert', 'drink')
+
+        >>> treats = [{'type': 'dessert'},{'type': 'dessert'},{'type':'drink'},{'type':'drink'},{'type':'appetizer'}]
+        >>> most_and_least_common_type(treats)
+        ('dessert', 'appetizer')
 
     """
 
